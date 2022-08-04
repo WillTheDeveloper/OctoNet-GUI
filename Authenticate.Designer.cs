@@ -60,6 +60,7 @@
             this.bttn_login.TabIndex = 2;
             this.bttn_login.Text = "Login";
             this.bttn_login.UseVisualStyleBackColor = true;
+            this.bttn_login.Click += new System.EventHandler(this.bttn_login_Click);
             // 
             // lbl_status
             // 
@@ -69,6 +70,7 @@
             this.lbl_status.Size = new System.Drawing.Size(128, 13);
             this.lbl_status.TabIndex = 3;
             this.lbl_status.Text = "Status: Not authenticated";
+            this.lbl_status.Click += new System.EventHandler(this.lbl_status_Click);
             // 
             // Authenticate
             // 
