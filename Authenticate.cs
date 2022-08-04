@@ -10,24 +10,23 @@ using System.Windows.Forms;
 
 namespace OctoNet_GUI
 {
-    public partial class Form1 : Form
+    public partial class Authenticate : Form
     {
-        public string auth { get; set; }
+        Form1 form = new Form1();
 
-        public Form1()
+        public Authenticate()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Authenticate_Load(object sender, EventArgs e)
         {
-
+            tb_auth_key.Text = form.auth;
         }
 
-        private void bttn_authenticate_Click(object sender, EventArgs e)
+        private void tb_auth_key_TextChanged(object sender, EventArgs e)
         {
-            var a = new Authenticate();
-            a.Show();
+
         }
     }
 }
