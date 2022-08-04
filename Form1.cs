@@ -22,13 +22,6 @@ namespace OctoNet_GUI
             InitializeComponent();
         }
 
-        public async void tryAuth(string token)
-        {
-            var tokenAuth = new Credentials(token);
-            client.Credentials = tokenAuth;
-            user = await client.User.Current();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 

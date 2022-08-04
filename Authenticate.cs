@@ -30,11 +30,12 @@ namespace OctoNet_GUI
 
         }
 
-        private void bttn_login_Click(object sender, EventArgs e)
+        private async void bttn_login_Click(object sender, EventArgs e)
         {
-            form.tryAuth(tb_auth_key.Text);
-            form.auth = tb_auth_key.Text;
-            var name = form.user.Login;
+            var tokenAuth = new Credentials(tb_auth_key.Text);
+            form.client.Credentials = tokenAuth;
+            User user = await form.client.User.Current();
+            var name = user.Login;
             lbl_status.Text = name.ToString();
         }
 
