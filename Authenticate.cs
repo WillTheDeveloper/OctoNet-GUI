@@ -30,7 +30,7 @@ namespace OctoNet_GUI
 
         }
 
-        private async void bttn_login_Click(object sender, EventArgs e)
+        private void bttn_login_Click(object sender, EventArgs e)
         {
             form.tryAuth(tb_auth_key.Text);
             form.auth = tb_auth_key.Text;
