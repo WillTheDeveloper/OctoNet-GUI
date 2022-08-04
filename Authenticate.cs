@@ -34,7 +34,6 @@ namespace OctoNet_GUI
         {
             form.tryAuth(tb_auth_key.Text);
             form.auth = tb_auth_key.Text;
-            form.tryAuth(tb_auth_key.Text.ToString());
             var name = form.user.Login;
             lbl_status.Text = name.ToString();
         }
