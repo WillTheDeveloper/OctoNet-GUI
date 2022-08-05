@@ -29,7 +29,7 @@ namespace OctoNet_GUI
             var remaining = rateLimit.Result;
             var limit = remaining.Resources.Core.Remaining;
 
-            lbl_requests_remaining.Text = limit.ToString();
+            lbl_requests_remaining.Text = "API requests remaining: " + limit.ToString();
         }
 
         private void lbl_requests_remaining_Click(object sender, EventArgs e)
