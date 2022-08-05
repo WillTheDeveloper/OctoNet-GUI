@@ -105,6 +105,7 @@
             this.bttn_save_changes.Text = "Save Changes";
             this.bttn_save_changes.UseVisualStyleBackColor = true;
             this.bttn_save_changes.Visible = false;
+            this.bttn_save_changes.Click += new System.EventHandler(this.bttn_save_changes_Click);
             // 
             // Profile
             // 

@@ -34,17 +34,29 @@ namespace OctoNet_GUI
 
         private void bttn_enable_edit_Click(object sender, EventArgs e)
         {
-
+            bttn_save_changes.Enabled = true;
+            tb_name_on_profile.Enabled = true;
+            tb_bio.Enabled = true;
+            bttn_enable_edit.Enabled = false;
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            tb_name_on_profile.Enabled = false;
+            tb_bio.Enabled = false;
+
+            bttn_save_changes.Enabled = false;
             tb_name_on_profile.Text = user.Name.ToString();
             tb_bio.Text = user.Bio.ToString();
             web_pfp.Url = new Uri(user.AvatarUrl.ToString());
         }
 
         private void web_pfp_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void bttn_save_changes_Click(object sender, EventArgs e)
         {
 
         }
