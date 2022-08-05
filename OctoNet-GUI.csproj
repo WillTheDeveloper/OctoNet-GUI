@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApiStatus.Designer.cs">
+      <DependentUpon>ApiStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authenticate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     <Compile Include="Repositories.Designer.cs">
       <DependentUpon>Repositories.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ApiStatus.resx">
+      <DependentUpon>ApiStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authenticate.resx">
       <DependentUpon>Authenticate.cs</DependentUpon>
     </EmbeddedResource>

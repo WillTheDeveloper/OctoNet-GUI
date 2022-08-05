@@ -20,7 +20,7 @@ namespace OctoNet_GUI
         public Issues()
         {
             InitializeComponent();
-            
+
         }
 
         private void Issues_Load(object sender, EventArgs e)
@@ -36,7 +36,9 @@ namespace OctoNet_GUI
 
         private void lb_issues_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var selectedRepo = lb_issues.SelectedItem.ToString();
+            var selectedIssue = client.Issue.GetAllForCurrent().Result.Where(x => x.Title == selectedRepo).First();
+            lbl_issue_name.Text = selectedIssue.Title;
         }
     }
 }

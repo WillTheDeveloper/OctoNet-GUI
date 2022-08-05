@@ -38,5 +38,17 @@ namespace OctoNet_GUI
             Form form = new Issues();
             form.Show();
         }
+
+        private void bttn_repositories_Click(object sender, EventArgs e)
+        {
+            Form form = new Repositories();
+            form.Show();
+        }
+
+        private void bttn_api_check_Click(object sender, EventArgs e)
+        {
+            Form form = new ApiStatus();
+            form.Show();
+        }
     }
 }
