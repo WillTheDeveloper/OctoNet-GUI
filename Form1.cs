@@ -14,7 +14,7 @@ namespace OctoNet_GUI
     public partial class Form1 : Form
     {
         public string auth { get; set; }
-        public GitHubClient client { get; } = new GitHubClient(new ProductHeaderValue("Octonet-Gui"));
+        public GitHubClient client { get; set; } = new GitHubClient(new ProductHeaderValue("Octonet-Gui"));
         public User user { get; set; }
 
         public Form1()
@@ -31,6 +31,12 @@ namespace OctoNet_GUI
         {
             var a = new Authenticate();
             a.Show();
+        }
+
+        private void bttn_issues_Click(object sender, EventArgs e)
+        {
+            Form form = new Issues();
+            form.Show();
         }
     }
 }

@@ -15,6 +15,8 @@ namespace OctoNet_GUI
     {
         Form1 form = new Form1();
 
+        public User auth { get; set; }
+
         public Authenticate()
         {
             InitializeComponent();
@@ -35,7 +37,10 @@ namespace OctoNet_GUI
             var tokenAuth = new Credentials(tb_auth_key.Text);
             form.client.Credentials = tokenAuth;
             User user = await form.client.User.Current();
+            form.user = user;
+            Console.WriteLine(form.user.Login);
             var name = user.Login;
+            auth = user;
             lbl_status.Text = name.ToString();
         }
 
