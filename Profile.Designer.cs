@@ -39,6 +39,8 @@
             this.tb_website = new System.Windows.Forms.TextBox();
             this.lbl_location = new System.Windows.Forms.Label();
             this.tb_location = new System.Windows.Forms.TextBox();
+            this.lbl_company = new System.Windows.Forms.Label();
+            this.tb_company = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_name_on_profile
@@ -147,11 +149,29 @@
             this.tb_location.TabIndex = 11;
             this.tb_location.TextChanged += new System.EventHandler(this.tb_location_TextChanged);
             // 
+            // lbl_company
+            // 
+            this.lbl_company.AutoSize = true;
+            this.lbl_company.Location = new System.Drawing.Point(13, 273);
+            this.lbl_company.Name = "lbl_company";
+            this.lbl_company.Size = new System.Drawing.Size(51, 13);
+            this.lbl_company.TabIndex = 12;
+            this.lbl_company.Text = "Company";
+            // 
+            // tb_company
+            // 
+            this.tb_company.Location = new System.Drawing.Point(16, 290);
+            this.tb_company.Name = "tb_company";
+            this.tb_company.Size = new System.Drawing.Size(304, 20);
+            this.tb_company.TabIndex = 13;
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tb_company);
+            this.Controls.Add(this.lbl_company);
             this.Controls.Add(this.tb_location);
             this.Controls.Add(this.lbl_location);
             this.Controls.Add(this.tb_website);
@@ -183,5 +203,7 @@
         private System.Windows.Forms.TextBox tb_website;
         private System.Windows.Forms.Label lbl_location;
         private System.Windows.Forms.TextBox tb_location;
+        private System.Windows.Forms.Label lbl_company;
+        private System.Windows.Forms.TextBox tb_company;
     }
 }

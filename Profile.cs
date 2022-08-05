@@ -39,6 +39,7 @@ namespace OctoNet_GUI
             tb_bio.Enabled = true;
             tb_location.Enabled = true;
             tb_website.Enabled = true;
+            tb_company.Enabled = true;
             bttn_enable_edit.Enabled = false;
 
             bttn_save_changes.Enabled = true;
@@ -51,6 +52,7 @@ namespace OctoNet_GUI
             tb_bio.Enabled = false;
             tb_location.Enabled = false;
             tb_website.Enabled = false;
+            tb_company.Enabled = false;
 
             bttn_save_changes.Enabled = false;
             bttn_save_changes.Visible = false;
@@ -59,6 +61,8 @@ namespace OctoNet_GUI
             web_pfp.Url = new Uri(user.AvatarUrl.ToString());
             tb_location.Text = user.Location.ToString();
             tb_website.Text = user.Blog.ToString();
+            tb_company.Text = user.Company.ToString();
+
         }
 
         private void web_pfp_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
