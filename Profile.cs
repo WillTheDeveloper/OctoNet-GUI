@@ -37,15 +37,23 @@ namespace OctoNet_GUI
             bttn_save_changes.Enabled = true;
             tb_name_on_profile.Enabled = true;
             tb_bio.Enabled = true;
+            tb_location.Enabled = true;
+            tb_website.Enabled = true;
             bttn_enable_edit.Enabled = false;
+
+            bttn_save_changes.Enabled = true;
+            bttn_save_changes.Visible = true;
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
             tb_name_on_profile.Enabled = false;
             tb_bio.Enabled = false;
+            tb_location.Enabled = false;
+            tb_website.Enabled = false;
 
             bttn_save_changes.Enabled = false;
+            bttn_save_changes.Visible = false;
             tb_name_on_profile.Text = user.Name.ToString();
             tb_bio.Text = user.Bio.ToString();
             web_pfp.Url = new Uri(user.AvatarUrl.ToString());
@@ -57,6 +65,16 @@ namespace OctoNet_GUI
         }
 
         private void bttn_save_changes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_website_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_location_TextChanged(object sender, EventArgs e)
         {
 
         }

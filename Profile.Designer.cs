@@ -35,6 +35,10 @@
             this.bttn_enable_edit = new System.Windows.Forms.Button();
             this.web_pfp = new System.Windows.Forms.WebBrowser();
             this.bttn_save_changes = new System.Windows.Forms.Button();
+            this.lbl_website = new System.Windows.Forms.Label();
+            this.tb_website = new System.Windows.Forms.TextBox();
+            this.lbl_location = new System.Windows.Forms.Label();
+            this.tb_location = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbl_name_on_profile
@@ -58,7 +62,7 @@
             // lbl_bio
             // 
             this.lbl_bio.AutoSize = true;
-            this.lbl_bio.Location = new System.Drawing.Point(16, 57);
+            this.lbl_bio.Location = new System.Drawing.Point(13, 58);
             this.lbl_bio.Name = "lbl_bio";
             this.lbl_bio.Size = new System.Drawing.Size(22, 13);
             this.lbl_bio.TabIndex = 3;
@@ -107,11 +111,51 @@
             this.bttn_save_changes.Visible = false;
             this.bttn_save_changes.Click += new System.EventHandler(this.bttn_save_changes_Click);
             // 
+            // lbl_website
+            // 
+            this.lbl_website.AutoSize = true;
+            this.lbl_website.Location = new System.Drawing.Point(13, 181);
+            this.lbl_website.Name = "lbl_website";
+            this.lbl_website.Size = new System.Drawing.Size(46, 13);
+            this.lbl_website.TabIndex = 8;
+            this.lbl_website.Text = "Website";
+            // 
+            // tb_website
+            // 
+            this.tb_website.Enabled = false;
+            this.tb_website.Location = new System.Drawing.Point(16, 197);
+            this.tb_website.Name = "tb_website";
+            this.tb_website.Size = new System.Drawing.Size(304, 20);
+            this.tb_website.TabIndex = 9;
+            this.tb_website.TextChanged += new System.EventHandler(this.tb_website_TextChanged);
+            // 
+            // lbl_location
+            // 
+            this.lbl_location.AutoSize = true;
+            this.lbl_location.Location = new System.Drawing.Point(13, 225);
+            this.lbl_location.Name = "lbl_location";
+            this.lbl_location.Size = new System.Drawing.Size(48, 13);
+            this.lbl_location.TabIndex = 10;
+            this.lbl_location.Text = "Location";
+            // 
+            // tb_location
+            // 
+            this.tb_location.Enabled = false;
+            this.tb_location.Location = new System.Drawing.Point(16, 241);
+            this.tb_location.Name = "tb_location";
+            this.tb_location.Size = new System.Drawing.Size(304, 20);
+            this.tb_location.TabIndex = 11;
+            this.tb_location.TextChanged += new System.EventHandler(this.tb_location_TextChanged);
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tb_location);
+            this.Controls.Add(this.lbl_location);
+            this.Controls.Add(this.tb_website);
+            this.Controls.Add(this.lbl_website);
             this.Controls.Add(this.bttn_save_changes);
             this.Controls.Add(this.web_pfp);
             this.Controls.Add(this.bttn_enable_edit);
@@ -135,5 +179,9 @@
         private System.Windows.Forms.Button bttn_enable_edit;
         public System.Windows.Forms.WebBrowser web_pfp;
         private System.Windows.Forms.Button bttn_save_changes;
+        private System.Windows.Forms.Label lbl_website;
+        private System.Windows.Forms.TextBox tb_website;
+        private System.Windows.Forms.Label lbl_location;
+        private System.Windows.Forms.TextBox tb_location;
     }
 }
