@@ -7,34 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Octokit;
 
 namespace OctoNet_GUI
 {
     public partial class Issues : Form
     {
-        Form1 form = new Form1();
-        readonly Authenticate Authenticated = new Authenticate();
+        public string authToken = Form1.auth;
+        public GitHubClient client = Form1.client;
+        public User user = Form1.user;
 
         public Issues()
         {
             InitializeComponent();
+            
         }
 
         private void Issues_Load(object sender, EventArgs e)
         {
-            /*var ls = form.client.Issue.GetAllForCurrent().Result;*/
-
-            lb_issues.Items.Add(Authenticated.auth.Name);
-
-            /*foreach (var aaaa in ls)
-            {
-                Console.WriteLine(aaaa.Title);
-            }
+            var ls = client.Issue.GetAllForCurrent().Result;
 
             foreach (var issue in ls)
             {
                 lb_issues.Items.Add(issue.Title);
-            }*/
+            }
 
         }
 
