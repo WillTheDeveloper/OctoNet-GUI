@@ -32,12 +32,16 @@ namespace OctoNet_GUI
 
         private void lb_repositories_SelectedIndexChanged(object sender, EventArgs e)
         {
+            lbl_loading_state.Visible = true;
+            lb_repositories.Enabled = false;
             //Get selected repo
             var selected = lb_repositories.SelectedItem.ToString();
             var selectedRepo = client.Repository.GetAllForCurrent().Result.Where(x => x.Name == selected).First();
 
-            lbl_repo_name.Text = selectedRepo.Name;
-            lbl_repo_description.Text = selectedRepo.Description;
+            lbl_repo_name.Text = "Name: " + selectedRepo.Name;
+            lbl_repo_description.Text = "Description: " + selectedRepo.Description;
+            lbl_loading_state.Visible = false;
+            lb_repositories.Enabled = true;
         }
     }
 }
