@@ -144,6 +144,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Releases.resx">
+      <DependentUpon>Releases.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Repositories.resx">
       <DependentUpon>Repositories.cs</DependentUpon>
     </EmbeddedResource>

@@ -56,5 +56,23 @@ namespace OctoNet_GUI
             Form form = new Profile();
             form.Show();
         }
+
+        private void bttn_releases_Click(object sender, EventArgs e)
+        {
+            Form form = new Releases();
+            form.Show();
+        }
+
+        private void bttn_milestones_Click(object sender, EventArgs e)
+        {
+            Form form = new Milestones();
+            form.Show();
+        }
+
+        private void bttn_users_Click(object sender, EventArgs e)
+        {
+            Form form = new Users();
+            form.Show();
+        }
     }
 }
