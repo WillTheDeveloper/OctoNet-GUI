@@ -57,6 +57,8 @@ namespace OctoNet_GUI
             tb_name_on_profile.Text = user.Name.ToString();
             tb_bio.Text = user.Bio.ToString();
             web_pfp.Url = new Uri(user.AvatarUrl.ToString());
+            tb_location.Text = user.Location.ToString();
+            tb_website.Text = user.Blog.ToString();
         }
 
         private void web_pfp_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
