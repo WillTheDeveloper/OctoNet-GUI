@@ -32,6 +32,7 @@
             this.bttn_issues = new System.Windows.Forms.Button();
             this.bttn_repositories = new System.Windows.Forms.Button();
             this.bttn_api_check = new System.Windows.Forms.Button();
+            this.bttn_profile = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttn_authenticate
@@ -76,11 +77,21 @@
             this.bttn_api_check.UseVisualStyleBackColor = true;
             this.bttn_api_check.Click += new System.EventHandler(this.bttn_api_check_Click);
             // 
+            // bttn_profile
+            // 
+            this.bttn_profile.Location = new System.Drawing.Point(12, 71);
+            this.bttn_profile.Name = "bttn_profile";
+            this.bttn_profile.Size = new System.Drawing.Size(75, 23);
+            this.bttn_profile.TabIndex = 4;
+            this.bttn_profile.Text = "Profile";
+            this.bttn_profile.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_profile);
             this.Controls.Add(this.bttn_api_check);
             this.Controls.Add(this.bttn_repositories);
             this.Controls.Add(this.bttn_issues);
@@ -98,6 +109,7 @@
         private System.Windows.Forms.Button bttn_issues;
         private System.Windows.Forms.Button bttn_repositories;
         private System.Windows.Forms.Button bttn_api_check;
+        private System.Windows.Forms.Button bttn_profile;
     }
 }
 
