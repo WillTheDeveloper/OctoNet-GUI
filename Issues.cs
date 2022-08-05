@@ -40,13 +40,29 @@ namespace OctoNet_GUI
         {
             lbl_loading_state.Visible = true;
             lb_issues.Enabled = false;
-            
+            bttn_assignees.Enabled = false;
+            bttn_comments.Enabled = false;
+            bttn_labels.Enabled = false;
+
             var selectedRepo = lb_issues.SelectedItem.ToString();
             var selectedIssue = client.Issue.GetAllForCurrent().Result.Where(x => x.Title == selectedRepo).First();
-            
+
             lbl_issue_name.Text = selectedIssue.Title;
             lbl_issue_body.Text = selectedIssue.Body;
-            
+
+            if (lb_issues.SelectedIndex != -1)
+            {
+                bttn_assignees.Enabled = true;
+                bttn_comments.Enabled = true;
+                bttn_labels.Enabled = true;
+            }
+            else
+            {
+                bttn_assignees.Enabled = false;
+                bttn_comments.Enabled = false;
+                bttn_labels.Enabled = false;
+            }
+
             lb_issues.Enabled = true;
             lbl_loading_state.Visible = false;
         }
