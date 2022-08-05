@@ -50,5 +50,11 @@ namespace OctoNet_GUI
             Form form = new ApiStatus();
             form.Show();
         }
+
+        private void bttn_profile_Click(object sender, EventArgs e)
+        {
+            Form form = new Profile();
+            form.Show();
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace OctoNet_GUI
             client.Credentials = tokenAuth;
             user = await client.User.Current();
             Console.WriteLine(user.Login);
+            Form1.user = user;
             var name = user.Login;
             lbl_status.Text = name.ToString();
         }
