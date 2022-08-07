@@ -32,6 +32,8 @@
             this.lbl_repo_name = new System.Windows.Forms.Label();
             this.lbl_repo_description = new System.Windows.Forms.Label();
             this.lbl_loading_state = new System.Windows.Forms.Label();
+            this.bttn_forks = new System.Windows.Forms.Button();
+            this.bttn_stars = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_repositories
@@ -72,11 +74,31 @@
             this.lbl_loading_state.Text = "LOADING, PLEASE WAIT";
             this.lbl_loading_state.Visible = false;
             // 
+            // bttn_forks
+            // 
+            this.bttn_forks.Location = new System.Drawing.Point(409, 384);
+            this.bttn_forks.Name = "bttn_forks";
+            this.bttn_forks.Size = new System.Drawing.Size(75, 23);
+            this.bttn_forks.TabIndex = 9;
+            this.bttn_forks.Text = "Forks";
+            this.bttn_forks.UseVisualStyleBackColor = true;
+            // 
+            // bttn_stars
+            // 
+            this.bttn_stars.Location = new System.Drawing.Point(490, 384);
+            this.bttn_stars.Name = "bttn_stars";
+            this.bttn_stars.Size = new System.Drawing.Size(75, 23);
+            this.bttn_stars.TabIndex = 10;
+            this.bttn_stars.Text = "Stars";
+            this.bttn_stars.UseVisualStyleBackColor = true;
+            // 
             // Repositories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_stars);
+            this.Controls.Add(this.bttn_forks);
             this.Controls.Add(this.lbl_loading_state);
             this.Controls.Add(this.lbl_repo_description);
             this.Controls.Add(this.lbl_repo_name);
@@ -95,5 +117,7 @@
         private System.Windows.Forms.Label lbl_repo_name;
         private System.Windows.Forms.Label lbl_repo_description;
         private System.Windows.Forms.Label lbl_loading_state;
+        private System.Windows.Forms.Button bttn_forks;
+        private System.Windows.Forms.Button bttn_stars;
     }
 }
