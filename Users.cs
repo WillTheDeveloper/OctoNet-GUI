@@ -29,27 +29,61 @@ namespace OctoNet_GUI
 
         private void bttn_get_user_Click(object sender, EventArgs e)
         {
-            string user = tb_user_find.Text;
-
-            if(user == "")
+            if(tb_user_find.Text != null)
             {
-                bttn_get_user.ForeColor = Color.Red;
-            }
-            else if (user != "")
-            {
-                bttn_get_user.ForeColor = Color.Black;
+                User user = client.User.Get(tb_user_find.Text).Result;
 
-                User data = client.User.Get(user).Result;
+                tb_name.Clear();
+                tb_bio.Clear();
+                tb_blog.Clear();
+                tb_email.Clear();
+                tb_company.Clear();
+                tb_twitter.Clear();
+                tb_followers.Clear();
+                tb_following.Clear();
+                tb_created_at.Clear();
+                tb_updated_at.Clear();
+                wb_pfp.Url = null;
 
-                if (data.Email.ToString() != null)
+                if (user.AvatarUrl != null)
                 {
-                    lbl_email.Text = data.Email.ToString();
+                    wb_pfp.Url = new Uri(user.AvatarUrl.ToString());
                 }
 
-                if (data.Blog.ToString() != null)
+                if (user.Name != null)
                 {
-                    lbl_blog.Text = data.Blog.ToString();
+                    tb_name.Text = user.Name.ToString();
                 }
+
+                if (user.Bio != null)
+                {
+                    tb_bio.Text = user.Bio.ToString();
+                }
+
+                if (user.Blog != null)
+                {
+                    tb_blog.Text = user.Blog.ToString();
+                }
+
+                if (user.Email != null)
+                {
+                    tb_email.Text = user.Email.ToString();
+                }
+
+                if (user.Company != null)
+                {
+                    tb_company.Text = user.Company.ToString();
+                }
+
+                /*if (user.TwitterUsername != null)
+                {
+                    tb_twitter.Text = user.TwitterUsername.ToString();
+                }*/
+
+                tb_followers.Text = user.Followers.ToString();
+                tb_following.Text = user.Following.ToString();
+                tb_created_at.Text = user.CreatedAt.ToString();
+                tb_updated_at.Text = user.UpdatedAt.ToString();
             }
         }
     }
