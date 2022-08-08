@@ -37,6 +37,7 @@
             this.lb_files = new System.Windows.Forms.ListBox();
             this.bttn_download = new System.Windows.Forms.Button();
             this.bttn_comments = new System.Windows.Forms.Button();
+            this.pb_bar = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // lb_commit_list
@@ -123,11 +124,21 @@
             this.bttn_comments.Text = "Comments";
             this.bttn_comments.UseVisualStyleBackColor = true;
             // 
+            // pb_bar
+            // 
+            this.pb_bar.Location = new System.Drawing.Point(524, 415);
+            this.pb_bar.Name = "pb_bar";
+            this.pb_bar.Size = new System.Drawing.Size(252, 23);
+            this.pb_bar.TabIndex = 14;
+            this.pb_bar.Visible = false;
+            this.pb_bar.Click += new System.EventHandler(this.pb_bar_Click);
+            // 
             // Commits
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pb_bar);
             this.Controls.Add(this.bttn_comments);
             this.Controls.Add(this.bttn_download);
             this.Controls.Add(this.lb_files);
@@ -156,5 +167,6 @@
         private System.Windows.Forms.ListBox lb_files;
         private System.Windows.Forms.Button bttn_download;
         private System.Windows.Forms.Button bttn_comments;
+        private System.Windows.Forms.ProgressBar pb_bar;
     }
 }

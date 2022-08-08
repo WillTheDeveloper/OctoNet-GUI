@@ -42,16 +42,22 @@ namespace OctoNet_GUI
         {
             lbl_loading_state.Visible = true;
             lb_commit_list.Enabled = false;
+            pb_bar.Visible = true;
+            pb_bar.Value = 0;
 
             var commits = client.Repository.Commit.GetAll(repo.Owner.Login, repo.Name).Result;
+            pb_bar.Value = 5;
 
             var selectedCommit = commits.Where(x => x.Commit.Message.ToString() == lb_commit_list.SelectedItem.ToString()).First();
+            pb_bar.Value = 20;
 
             lbl_commit_message.Text = selectedCommit.Commit.Message.ToString();
             lbl_comitter.Text = selectedCommit.Commit.Committer.Name.ToString();
+            pb_bar.Value = 30;
 
             lbl_additions.Text = "++" + selectedCommit.Stats.Additions;
             lbl_deletions.Text = "--" + selectedCommit.Stats.Deletions;
+            pb_bar.Value = 40;
 
             var files = selectedCommit.Files;
 
@@ -67,8 +73,14 @@ namespace OctoNet_GUI
                 lb_files.Items.Add("No files found");
             }
 
+            pb_bar.Visible = false;
             lbl_loading_state.Visible = false;
             lb_commit_list.Enabled = true;
+        }
+
+        private void pb_bar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
