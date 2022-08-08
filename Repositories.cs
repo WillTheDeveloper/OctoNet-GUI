@@ -17,6 +17,8 @@ namespace OctoNet_GUI
         public GitHubClient client = Form1.client;
         public User user = Form1.user;
 
+        public Repository bbbbb;
+
         public Repositories()
         {
             InitializeComponent();
@@ -37,11 +39,18 @@ namespace OctoNet_GUI
             //Get selected repo
             var selected = lb_repositories.SelectedItem.ToString();
             var selectedRepo = client.Repository.GetAllForCurrent().Result.Where(x => x.Name == selected).First();
+            bbbbb = selectedRepo;
 
             lbl_repo_name.Text = "Name: " + selectedRepo.Name;
             lbl_repo_description.Text = "Description: " + selectedRepo.Description;
             lbl_loading_state.Visible = false;
             lb_repositories.Enabled = true;
+        }
+
+        private void bttn_commits_Click(object sender, EventArgs e)
+        {
+            Form form = new Commits(bbbbb);
+            form.Show();
         }
     }
 }

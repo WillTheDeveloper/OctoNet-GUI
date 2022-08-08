@@ -34,6 +34,7 @@
             this.lbl_loading_state = new System.Windows.Forms.Label();
             this.bttn_forks = new System.Windows.Forms.Button();
             this.bttn_stars = new System.Windows.Forms.Button();
+            this.bttn_commits = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_repositories
@@ -92,11 +93,22 @@
             this.bttn_stars.Text = "Stars";
             this.bttn_stars.UseVisualStyleBackColor = true;
             // 
+            // bttn_commits
+            // 
+            this.bttn_commits.Location = new System.Drawing.Point(571, 384);
+            this.bttn_commits.Name = "bttn_commits";
+            this.bttn_commits.Size = new System.Drawing.Size(217, 23);
+            this.bttn_commits.TabIndex = 11;
+            this.bttn_commits.Text = "Commits";
+            this.bttn_commits.UseVisualStyleBackColor = true;
+            this.bttn_commits.Click += new System.EventHandler(this.bttn_commits_Click);
+            // 
             // Repositories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_commits);
             this.Controls.Add(this.bttn_stars);
             this.Controls.Add(this.bttn_forks);
             this.Controls.Add(this.lbl_loading_state);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.Label lbl_loading_state;
         private System.Windows.Forms.Button bttn_forks;
         private System.Windows.Forms.Button bttn_stars;
+        private System.Windows.Forms.Button bttn_commits;
     }
 }
