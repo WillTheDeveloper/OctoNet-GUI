@@ -39,6 +39,8 @@
             this.bttn_followers = new System.Windows.Forms.Button();
             this.bttn_following = new System.Windows.Forms.Button();
             this.bttn_gists = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_authenticate
@@ -155,11 +157,22 @@
             this.bttn_gists.UseVisualStyleBackColor = true;
             this.bttn_gists.Click += new System.EventHandler(this.bttn_gists_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::OctoNet_GUI.Properties.Resources.GitHub_Mark_120px_plus;
+            this.pictureBox1.Location = new System.Drawing.Point(664, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 122);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttn_gists);
             this.Controls.Add(this.bttn_following);
             this.Controls.Add(this.bttn_followers);
@@ -174,6 +187,7 @@
             this.Name = "Form1";
             this.Text = "Octonet GUI";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,6 +205,7 @@
         private System.Windows.Forms.Button bttn_followers;
         private System.Windows.Forms.Button bttn_following;
         private System.Windows.Forms.Button bttn_gists;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
