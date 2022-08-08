@@ -55,7 +55,7 @@ namespace OctoNet_GUI
 
         private void bttn_download_Click(object sender, EventArgs e)
         {
-            
+            var download = client.Repository.Content.GetArchive(bbbbb.Owner.Login, bbbbb.Name, ArchiveFormat.Tarball, "master").Result;
         }
     }
 }
