@@ -52,5 +52,10 @@ namespace OctoNet_GUI
             Form form = new Commits(bbbbb);
             form.Show();
         }
+
+        private void bttn_download_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

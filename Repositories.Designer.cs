@@ -36,6 +36,7 @@
             this.bttn_stars = new System.Windows.Forms.Button();
             this.bttn_commits = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bttn_download = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,11 +115,22 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // bttn_download
+            // 
+            this.bttn_download.Location = new System.Drawing.Point(409, 414);
+            this.bttn_download.Name = "bttn_download";
+            this.bttn_download.Size = new System.Drawing.Size(379, 23);
+            this.bttn_download.TabIndex = 13;
+            this.bttn_download.Text = "Download (zip)";
+            this.bttn_download.UseVisualStyleBackColor = true;
+            this.bttn_download.Click += new System.EventHandler(this.bttn_download_Click);
+            // 
             // Repositories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_download);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttn_commits);
             this.Controls.Add(this.bttn_stars);
@@ -146,5 +158,6 @@
         private System.Windows.Forms.Button bttn_stars;
         private System.Windows.Forms.Button bttn_commits;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bttn_download;
     }
 }

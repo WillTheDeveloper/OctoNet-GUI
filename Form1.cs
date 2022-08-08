@@ -80,5 +80,11 @@ namespace OctoNet_GUI
             Form form= new Gists();
             form.Show();
         }
+
+        private void bttn_pull_requests_Click(object sender, EventArgs e)
+        {
+            Form form = new Pulls();
+            form.Show();
+        }
     }
 }

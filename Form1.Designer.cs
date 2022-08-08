@@ -40,6 +40,7 @@
             this.bttn_following = new System.Windows.Forms.Button();
             this.bttn_gists = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bttn_pull_requests = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,12 +167,24 @@
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
+            // bttn_pull_requests
+            // 
+            this.bttn_pull_requests.Location = new System.Drawing.Point(695, 384);
+            this.bttn_pull_requests.Margin = new System.Windows.Forms.Padding(2);
+            this.bttn_pull_requests.Name = "bttn_pull_requests";
+            this.bttn_pull_requests.Size = new System.Drawing.Size(97, 58);
+            this.bttn_pull_requests.TabIndex = 14;
+            this.bttn_pull_requests.Text = "Pull requests";
+            this.bttn_pull_requests.UseVisualStyleBackColor = true;
+            this.bttn_pull_requests.Click += new System.EventHandler(this.bttn_pull_requests_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_pull_requests);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttn_gists);
             this.Controls.Add(this.bttn_following);
@@ -206,6 +219,7 @@
         private System.Windows.Forms.Button bttn_following;
         private System.Windows.Forms.Button bttn_gists;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bttn_pull_requests;
     }
 }
 
