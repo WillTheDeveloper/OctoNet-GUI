@@ -38,6 +38,7 @@
             this.bttn_users = new System.Windows.Forms.Button();
             this.bttn_followers = new System.Windows.Forms.Button();
             this.bttn_following = new System.Windows.Forms.Button();
+            this.bttn_gists = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bttn_authenticate
@@ -53,7 +54,7 @@
             // bttn_issues
             // 
             this.bttn_issues.Location = new System.Drawing.Point(8, 384);
-            this.bttn_issues.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttn_issues.Margin = new System.Windows.Forms.Padding(2);
             this.bttn_issues.Name = "bttn_issues";
             this.bttn_issues.Size = new System.Drawing.Size(97, 58);
             this.bttn_issues.TabIndex = 1;
@@ -64,7 +65,7 @@
             // bttn_repositories
             // 
             this.bttn_repositories.Location = new System.Drawing.Point(109, 384);
-            this.bttn_repositories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttn_repositories.Margin = new System.Windows.Forms.Padding(2);
             this.bttn_repositories.Name = "bttn_repositories";
             this.bttn_repositories.Size = new System.Drawing.Size(97, 58);
             this.bttn_repositories.TabIndex = 2;
@@ -95,7 +96,7 @@
             // bttn_releases
             // 
             this.bttn_releases.Location = new System.Drawing.Point(210, 384);
-            this.bttn_releases.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttn_releases.Margin = new System.Windows.Forms.Padding(2);
             this.bttn_releases.Name = "bttn_releases";
             this.bttn_releases.Size = new System.Drawing.Size(97, 58);
             this.bttn_releases.TabIndex = 5;
@@ -106,7 +107,7 @@
             // bttn_milestones
             // 
             this.bttn_milestones.Location = new System.Drawing.Point(311, 384);
-            this.bttn_milestones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttn_milestones.Margin = new System.Windows.Forms.Padding(2);
             this.bttn_milestones.Name = "bttn_milestones";
             this.bttn_milestones.Size = new System.Drawing.Size(97, 58);
             this.bttn_milestones.TabIndex = 6;
@@ -117,7 +118,7 @@
             // bttn_users
             // 
             this.bttn_users.Location = new System.Drawing.Point(412, 384);
-            this.bttn_users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bttn_users.Margin = new System.Windows.Forms.Padding(2);
             this.bttn_users.Name = "bttn_users";
             this.bttn_users.Size = new System.Drawing.Size(97, 58);
             this.bttn_users.TabIndex = 7;
@@ -143,11 +144,23 @@
             this.bttn_following.Text = "Following";
             this.bttn_following.UseVisualStyleBackColor = true;
             // 
+            // bttn_gists
+            // 
+            this.bttn_gists.Location = new System.Drawing.Point(594, 384);
+            this.bttn_gists.Margin = new System.Windows.Forms.Padding(2);
+            this.bttn_gists.Name = "bttn_gists";
+            this.bttn_gists.Size = new System.Drawing.Size(97, 58);
+            this.bttn_gists.TabIndex = 10;
+            this.bttn_gists.Text = "Gists";
+            this.bttn_gists.UseVisualStyleBackColor = true;
+            this.bttn_gists.Click += new System.EventHandler(this.bttn_gists_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bttn_gists);
             this.Controls.Add(this.bttn_following);
             this.Controls.Add(this.bttn_followers);
             this.Controls.Add(this.bttn_users);
@@ -177,6 +190,7 @@
         private System.Windows.Forms.Button bttn_users;
         private System.Windows.Forms.Button bttn_followers;
         private System.Windows.Forms.Button bttn_following;
+        private System.Windows.Forms.Button bttn_gists;
     }
 }
 

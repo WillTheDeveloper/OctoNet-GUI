@@ -74,5 +74,11 @@ namespace OctoNet_GUI
             Form form = new Users();
             form.Show();
         }
+
+        private void bttn_gists_Click(object sender, EventArgs e)
+        {
+            Form form= new Gists();
+            form.Show();
+        }
     }
 }
