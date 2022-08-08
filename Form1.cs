@@ -21,10 +21,17 @@ namespace OctoNet_GUI
         {
             InitializeComponent();
         }
-
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            /*//Get a list from the feed
+            var feed = new Feed();
+            var list = feed;
+            //Add the list to the listbox
+            foreach (var item in list.TimelineUrl)
+            {
+                lb_github_feed.Items.Add(item);
+            }*/
         }
 
         private void bttn_authenticate_Click(object sender, EventArgs e)

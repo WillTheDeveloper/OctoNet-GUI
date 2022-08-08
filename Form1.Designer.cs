@@ -41,6 +41,8 @@
             this.bttn_gists = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bttn_pull_requests = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lb_github_feed = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,12 +180,32 @@
             this.bttn_pull_requests.UseVisualStyleBackColor = true;
             this.bttn_pull_requests.Click += new System.EventHandler(this.bttn_pull_requests_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(105, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "GitHub Feed";
+            // 
+            // lb_github_feed
+            // 
+            this.lb_github_feed.FormattingEnabled = true;
+            this.lb_github_feed.Location = new System.Drawing.Point(109, 42);
+            this.lb_github_feed.Name = "lb_github_feed";
+            this.lb_github_feed.Size = new System.Drawing.Size(299, 316);
+            this.lb_github_feed.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lb_github_feed);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bttn_pull_requests);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttn_gists);
@@ -202,6 +224,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -220,6 +243,8 @@
         private System.Windows.Forms.Button bttn_gists;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bttn_pull_requests;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox lb_github_feed;
     }
 }
 
