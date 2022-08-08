@@ -17,6 +17,8 @@ namespace OctoNet_GUI
         public GitHubClient client = Form1.client;
         public User user = Form1.user;
 
+        public Issue select;
+
         public Issues()
         {
             InitializeComponent();
@@ -47,6 +49,8 @@ namespace OctoNet_GUI
             var selectedRepo = lb_issues.SelectedItem.ToString();
             var selectedIssue = client.Issue.GetAllForCurrent().Result.Where(x => x.Title == selectedRepo).First();
 
+            select = selectedIssue;
+
             lbl_issue_name.Text = selectedIssue.Title;
             lbl_issue_body.Text = selectedIssue.Body;
 
@@ -65,6 +69,31 @@ namespace OctoNet_GUI
 
             lb_issues.Enabled = true;
             lbl_loading_state.Visible = false;
+        }
+
+        private void bttn_assignees_Click(object sender, EventArgs e)
+        {
+            lb_whatever.Items.Clear();
+
+            foreach (var assignee in select.Assignees)
+            {
+                lb_whatever.Items.Add(assignee.Login);
+            }
+        }
+
+        private void bttn_labels_Click(object sender, EventArgs e)
+        {
+            lb_whatever.Items.Clear();
+
+            foreach (var label in select.Labels)
+            {
+                lb_whatever.Items.Add(label.Name);
+            }
+        }
+
+        private void bttn_comments_Click(object sender, EventArgs e)
+        {
+            lb_whatever.Items.Clear();
         }
     }
 }

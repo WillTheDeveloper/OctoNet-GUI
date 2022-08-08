@@ -35,13 +35,14 @@
             this.bttn_labels = new System.Windows.Forms.Button();
             this.bttn_comments = new System.Windows.Forms.Button();
             this.lbl_loading_state = new System.Windows.Forms.Label();
+            this.lb_whatever = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // lb_issues
             // 
             this.lb_issues.FormattingEnabled = true;
             this.lb_issues.Location = new System.Drawing.Point(15, 18);
-            this.lb_issues.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lb_issues.Margin = new System.Windows.Forms.Padding(2);
             this.lb_issues.Name = "lb_issues";
             this.lb_issues.Size = new System.Drawing.Size(359, 381);
             this.lb_issues.TabIndex = 0;
@@ -74,6 +75,7 @@
             this.bttn_assignees.TabIndex = 3;
             this.bttn_assignees.Text = "Assignees";
             this.bttn_assignees.UseVisualStyleBackColor = true;
+            this.bttn_assignees.Click += new System.EventHandler(this.bttn_assignees_Click);
             // 
             // bttn_labels
             // 
@@ -84,6 +86,7 @@
             this.bttn_labels.TabIndex = 4;
             this.bttn_labels.Text = "Labels";
             this.bttn_labels.UseVisualStyleBackColor = true;
+            this.bttn_labels.Click += new System.EventHandler(this.bttn_labels_Click);
             // 
             // bttn_comments
             // 
@@ -94,6 +97,7 @@
             this.bttn_comments.TabIndex = 5;
             this.bttn_comments.Text = "Comments";
             this.bttn_comments.UseVisualStyleBackColor = true;
+            this.bttn_comments.Click += new System.EventHandler(this.bttn_comments_Click);
             // 
             // lbl_loading_state
             // 
@@ -106,11 +110,20 @@
             this.lbl_loading_state.Text = "LOADING, PLEASE WAIT";
             this.lbl_loading_state.Visible = false;
             // 
+            // lb_whatever
+            // 
+            this.lb_whatever.FormattingEnabled = true;
+            this.lb_whatever.Location = new System.Drawing.Point(394, 162);
+            this.lb_whatever.Name = "lb_whatever";
+            this.lb_whatever.Size = new System.Drawing.Size(374, 199);
+            this.lb_whatever.TabIndex = 7;
+            // 
             // Issues
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(795, 441);
+            this.Controls.Add(this.lb_whatever);
             this.Controls.Add(this.lbl_loading_state);
             this.Controls.Add(this.bttn_comments);
             this.Controls.Add(this.bttn_labels);
@@ -118,7 +131,7 @@
             this.Controls.Add(this.lbl_issue_body);
             this.Controls.Add(this.lbl_issue_name);
             this.Controls.Add(this.lb_issues);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Issues";
             this.Text = "Issues";
             this.Load += new System.EventHandler(this.Issues_Load);
@@ -136,5 +149,6 @@
         private System.Windows.Forms.Button bttn_labels;
         private System.Windows.Forms.Button bttn_comments;
         private System.Windows.Forms.Label lbl_loading_state;
+        private System.Windows.Forms.ListBox lb_whatever;
     }
 }
