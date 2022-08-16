@@ -24,14 +24,11 @@ namespace OctoNet_GUI
         
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*//Get a list from the feed
-            var feed = new Feed();
-            var list = feed;
-            //Add the list to the listbox
-            foreach (var item in list.TimelineUrl)
+            var activity = client.Activity.Events.GetAll().Result;
+            foreach (var item in activity)
             {
-                lb_github_feed.Items.Add(item);
-            }*/
+                lb_github_feed.Items.Add(item.Repo.Name + " - " + item.Type);
+            }
         }
 
         private void bttn_authenticate_Click(object sender, EventArgs e)
@@ -92,6 +89,11 @@ namespace OctoNet_GUI
         {
             Form form = new Pulls();
             form.Show();
+        }
+
+        private void lb_github_feed_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

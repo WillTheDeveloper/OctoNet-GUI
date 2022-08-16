@@ -197,6 +197,7 @@
             this.lb_github_feed.Name = "lb_github_feed";
             this.lb_github_feed.Size = new System.Drawing.Size(299, 316);
             this.lb_github_feed.TabIndex = 16;
+            this.lb_github_feed.SelectedIndexChanged += new System.EventHandler(this.lb_github_feed_SelectedIndexChanged);
             // 
             // Form1
             // 
