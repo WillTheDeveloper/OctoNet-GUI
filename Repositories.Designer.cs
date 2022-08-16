@@ -37,6 +37,9 @@
             this.bttn_commits = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bttn_download = new System.Windows.Forms.Button();
+            this.lbl_open_issues = new System.Windows.Forms.Label();
+            this.lbl_default_branch = new System.Windows.Forms.Label();
+            this.lbl_license = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,11 +128,41 @@
             this.bttn_download.UseVisualStyleBackColor = true;
             this.bttn_download.Click += new System.EventHandler(this.bttn_download_Click);
             // 
+            // lbl_open_issues
+            // 
+            this.lbl_open_issues.AutoSize = true;
+            this.lbl_open_issues.Location = new System.Drawing.Point(406, 84);
+            this.lbl_open_issues.Name = "lbl_open_issues";
+            this.lbl_open_issues.Size = new System.Drawing.Size(95, 13);
+            this.lbl_open_issues.TabIndex = 14;
+            this.lbl_open_issues.Text = "Open issues count";
+            // 
+            // lbl_default_branch
+            // 
+            this.lbl_default_branch.AutoSize = true;
+            this.lbl_default_branch.Location = new System.Drawing.Point(406, 122);
+            this.lbl_default_branch.Name = "lbl_default_branch";
+            this.lbl_default_branch.Size = new System.Drawing.Size(77, 13);
+            this.lbl_default_branch.TabIndex = 15;
+            this.lbl_default_branch.Text = "Default branch";
+            // 
+            // lbl_license
+            // 
+            this.lbl_license.AutoSize = true;
+            this.lbl_license.Location = new System.Drawing.Point(407, 156);
+            this.lbl_license.Name = "lbl_license";
+            this.lbl_license.Size = new System.Drawing.Size(44, 13);
+            this.lbl_license.TabIndex = 16;
+            this.lbl_license.Text = "License";
+            // 
             // Repositories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_license);
+            this.Controls.Add(this.lbl_default_branch);
+            this.Controls.Add(this.lbl_open_issues);
             this.Controls.Add(this.bttn_download);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttn_commits);
@@ -159,5 +192,8 @@
         private System.Windows.Forms.Button bttn_commits;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bttn_download;
+        private System.Windows.Forms.Label lbl_open_issues;
+        private System.Windows.Forms.Label lbl_default_branch;
+        private System.Windows.Forms.Label lbl_license;
     }
 }
