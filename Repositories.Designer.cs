@@ -89,6 +89,7 @@
             this.bttn_forks.TabIndex = 9;
             this.bttn_forks.Text = "Forks";
             this.bttn_forks.UseVisualStyleBackColor = true;
+            this.bttn_forks.Click += new System.EventHandler(this.bttn_forks_Click);
             // 
             // bttn_stars
             // 

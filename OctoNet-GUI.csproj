@@ -82,6 +82,12 @@
     <Compile Include="Commits.Designer.cs">
       <DependentUpon>Commits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forks.Designer.cs">
+      <DependentUpon>Forks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Commits.resx">
       <DependentUpon>Commits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forks.resx">
+      <DependentUpon>Forks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

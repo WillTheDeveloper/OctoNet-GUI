@@ -55,13 +55,17 @@ namespace OctoNet_GUI
             lbl_comitter.Text = selectedCommit.Commit.Committer.Name.ToString();
             pb_bar.Value = 30;
 
-            lbl_additions.Text = "++" + selectedCommit.Stats.Additions;
-            lbl_deletions.Text = "--" + selectedCommit.Stats.Deletions;
+            if(selectedCommit.Stats != null)
+            {
+                lbl_additions.Text = "++" + selectedCommit.Stats.Additions;
+                lbl_deletions.Text = "--" + selectedCommit.Stats.Deletions;
+            }
+
             pb_bar.Value = 40;
 
             var files = selectedCommit.Files;
 
-            if(files.Count() > 0)
+            if(files.Count() != 0 & files.Count() > 0)
             {
                 foreach (var f in files)
                 {

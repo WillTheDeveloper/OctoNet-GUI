@@ -43,14 +43,17 @@ namespace OctoNet_GUI
 
             var openIssues = selectedRepo.OpenIssuesCount.ToString();
             var defaultBranch = selectedRepo.DefaultBranch.ToString();
-            var license = selectedRepo.License.ToString();
+            if(selectedRepo.License != null)
+            {
+                var license = selectedRepo.License.ToString();
+                lbl_license.Text = license;
+            }
 
             lbl_repo_name.Text = "Name: " + selectedRepo.Name;
             lbl_repo_description.Text = "Description: " + selectedRepo.Description;
             lbl_default_branch.Text = defaultBranch;
             lbl_open_issues.Text = openIssues;
-            lbl_license.Text = license;
-
+            
             lbl_loading_state.Visible = false;
             lb_repositories.Enabled = true;
         }
@@ -64,6 +67,12 @@ namespace OctoNet_GUI
         private void bttn_download_Click(object sender, EventArgs e)
         {
             var download = client.Repository.Content.GetArchive(bbbbb.Owner.Login, bbbbb.Name, ArchiveFormat.Tarball, "master").Result;
+        }
+
+        private void bttn_forks_Click(object sender, EventArgs e)
+        {
+            Form form = new Forks(bbbbb);
+            form.Show();
         }
     }
 }
