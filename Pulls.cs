@@ -13,9 +13,9 @@ namespace OctoNet_GUI
 {
     public partial class Pulls : Form
     {
-        public static string auth;
-        public static GitHubClient client = new GitHubClient(new ProductHeaderValue("Octonet-Gui"));
-        public static User user;
+        public string authToken = Form1.auth;
+        public GitHubClient client = Form1.client;
+        public User user = Form1.user;
 
         public Pulls()
         {
