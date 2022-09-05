@@ -33,6 +33,7 @@ namespace OctoNet_GUI
 
         private void duringTransaction()
         {
+            this.Text = "LOADING...";
             bttn_api_check.Enabled = false;
             bttn_authenticate.Enabled = false;
             bttn_followers.Enabled = false;
@@ -49,6 +50,7 @@ namespace OctoNet_GUI
 
         private void completedTransaction()
         {
+            this.Text = "Octonet GUI";
             bttn_api_check.Enabled = true;
             bttn_authenticate.Enabled = true;
             bttn_followers.Enabled = true;
